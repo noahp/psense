@@ -1,5 +1,8 @@
 # psense
 Power sensor
+# Schematic
+[Psense schematic](psense.pdf)
+
 # Parts
 ## USB
 * USB to I2C interface
