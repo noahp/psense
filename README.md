@@ -1,7 +1,10 @@
 # psense
-Power sensor
+USB interfaced, 2-channel current + voltage meter.
+
 # Schematic
-[Psense schematic](psense.pdf)
+[Schematic PDF here](psense.pdf)  
+
+![Render](https://github.com/noahp/psense/raw/master/psense_render.PNG)
 
 # Parts
 ## USB
