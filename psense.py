@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 '''
     MCP2221A + PAC1720 interface.
 
@@ -20,6 +20,7 @@ else:
     except:
         print 'Error, please `pip install pyusb`'
         sys.exit(-1)
+
 
 class Mcp2221aI2c(object):
     ''' I2C interface to MCP2221A '''
@@ -76,9 +77,9 @@ class Mcp2221aI2c(object):
 
         outpacket = [
             Mcp2221aI2c.CMD_MCP2221_RDDATA7,
-            length, # length LSB
-            0, # length MSB, unsupported
-            (address << 1) & 0xFF, # don't set read bit
+            length,  # length LSB
+            0,  # length MSB, unsupported
+            (address << 1) & 0xFF,  # don't set read bit
         ]
         self.hidwrite(outpacket)
         self.hidread()
@@ -98,13 +99,14 @@ class Mcp2221aI2c(object):
         '''Try to connect to the device. Stub that must be implemented in child class.'''
         raise NotImplementedError
 
+
 class Mcp2221aI2cWin32(Mcp2221aI2c):
     '''Windows HID interface to MCP2221A'''
 
     def hidread(self, timeout=100):
         '''Raw HID read of input report id=0x00 on EP3, 64 bytes'''
         startime = time.time()
-        endtime = startime + timeout/1000.0
+        endtime = startime + timeout / 1000.0
         data = []
         while (not len(data)) and (time.time() < endtime):
             if self.readdatatime > startime:
@@ -119,11 +121,12 @@ class Mcp2221aI2cWin32(Mcp2221aI2c):
 
     def hidwrite(self, data):
         '''Raw HID write to output report id=0x00 on EP3, up to 64 bytes'''
-        self.device.output_report.send([0x00] + data + [0] * (64-len(data)))
+        self.device.output_report.send([0x00] + data + [0] * (64 - len(data)))
 
     def connect(self):
         ''' Try to connect to the device '''
-        devices = hid.HidDeviceFilter(vendor_id=0x04d8, product_id=0x00dd).get_devices()
+        devices = hid.HidDeviceFilter(
+            vendor_id=0x04d8, product_id=0x00dd).get_devices()
         if len(devices):
             self.device = devices[0]
             self.device.open()
@@ -140,7 +143,7 @@ class Mcp2221aI2cWin32(Mcp2221aI2c):
                 0,
                 0,
                 Mcp2221aI2c.SUBCMD_STATUS_SPEED,
-                12000000/self.bus_speed - 3,
+                12000000 / self.bus_speed - 3,
                 0,
                 0,
                 0
@@ -162,7 +165,7 @@ class Mcp2221aI2cUnix(Mcp2221aI2c):
 
     def hidwrite(self, data):
         '''Raw HID write to EP3, up to 64 bytes'''
-        return self.device.write(0x03, data+[0]*(64-len(data)))
+        return self.device.write(0x03, data + [0] * (64 - len(data)))
 
     def connect(self):
         ''' Try to connect to the device '''
@@ -181,7 +184,7 @@ class Mcp2221aI2cUnix(Mcp2221aI2c):
                 0,
                 0,
                 Mcp2221aI2c.SUBCMD_STATUS_SPEED,
-                12000000/self.bus_speed - 3,
+                12000000 / self.bus_speed - 3,
                 0,
                 0,
                 0
@@ -195,10 +198,11 @@ class Mcp2221aI2cUnix(Mcp2221aI2c):
 
         return False
 
+
 if __name__ == '__main__':
     if sys.platform == 'win32':
         I2C = Mcp2221aI2cWin32()
-    else: # unix, probably
+    else:  # unix, probably
         I2C = Mcp2221aI2cUnix()
 
     if not I2C.connect():
@@ -206,6 +210,6 @@ if __name__ == '__main__':
         sys.exit(-1)
 
     print 'Reading PAC1720 Product ID register...'
-    I2C.write([0xFD]) # write the register address
-    data = I2C.read(1) # read 1 byte
-    print 'Product ID (expects 0x57): ' + ''.join('%c'%c for c in data).encode('hex')
+    I2C.write([0xFD])  # write the register address
+    data = I2C.read(1)  # read 1 byte
+    print 'Product ID (expects 0x57): ' + ''.join('%c' % c for c in data).encode('hex')
