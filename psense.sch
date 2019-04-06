@@ -1,36 +1,7 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
+EESchema Schematic File Version 4
 LIBS:kicadlib
 LIBS:psense-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -44,103 +15,14 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L PAC1720 U1
-U 1 1 589BCEA6
-P 5850 4800
-F 0 "U1" H 5850 4350 60  0000 C CNN
-F 1 "PAC1720" H 5850 5250 60  0000 C CNN
-F 2 "kicadlib:SMD_10-DFN" H 5650 4800 60  0001 C CNN
-F 3 "" H 5650 4800 60  0001 C CNN
-	1    5850 4800
-	1    0    0    -1  
-$EndComp
-$Comp
-L USB-micro-b J1
-U 1 1 58A07AEC
-P 2150 2400
-F 0 "J1" H 2150 1800 60  0000 C CNN
-F 1 "USB-micro-b" H 2150 3050 60  0000 C CNN
-F 2 "kicadlib:SMD_MICRO_USB_B_WPEGS" H 2150 2400 60  0001 C CNN
-F 3 "" H 2150 2400 60  0000 C CNN
-	1    2150 2400
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R1
-U 1 1 58A07D36
-P 1500 5600
-F 0 "R1" V 1580 5600 50  0000 C CNN
-F 1 "0.1R" V 1500 5600 50  0000 C CNN
-F 2 "kicadlib:SMD_0603_R" V 1430 5600 50  0001 C CNN
-F 3 "" H 1500 5600 50  0000 C CNN
-	1    1500 5600
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R2
-U 1 1 58A07D59
-P 1700 5600
-F 0 "R2" V 1780 5600 50  0000 C CNN
-F 1 "1.0R" V 1700 5600 50  0000 C CNN
-F 2 "kicadlib:SMD_0603_R" V 1630 5600 50  0001 C CNN
-F 3 "" H 1700 5600 50  0000 C CNN
-	1    1700 5600
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR01
-U 1 1 58A0804C
-P 2700 2700
-F 0 "#PWR01" H 2700 2450 50  0001 C CNN
-F 1 "GND" H 2700 2550 50  0000 C CNN
-F 2 "" H 2700 2700 50  0000 C CNN
-F 3 "" H 2700 2700 50  0000 C CNN
-	1    2700 2700
-	1    0    0    -1  
-$EndComp
-NoConn ~ 2450 2750
-Text Label 2550 2000 0    60   ~ 0
+Text Label 3950 2650 0    60   ~ 0
 USB_VBUS
-Text Label 2550 2150 0    60   ~ 0
+Text Label 3950 2950 0    60   ~ 0
 USB_DM
-Text Label 2550 2300 0    60   ~ 0
+Text Label 3950 2850 0    60   ~ 0
 USB_DP
-NoConn ~ 2450 2450
 Wire Wire Line
 	6550 5100 6450 5100
-Wire Wire Line
-	2450 2600 2700 2600
-Wire Wire Line
-	2700 2600 2700 2700
-Wire Wire Line
-	2550 2300 2450 2300
-Wire Wire Line
-	2450 2150 2550 2150
-Wire Wire Line
-	2550 2000 2450 2000
-$Comp
-L MCP2221A U2
-U 1 1 58A08AC7
-P 7000 1950
-F 0 "U2" H 7000 1400 60  0000 C CNN
-F 1 "MCP2221A" H 7000 2500 60  0000 C CNN
-F 2 "kicadlib:SMD_14-SOIC" H 7000 1850 60  0001 C CNN
-F 3 "" H 7000 1850 60  0001 C CNN
-	1    7000 1950
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR02
-U 1 1 58A09C3A
-P 5150 5200
-F 0 "#PWR02" H 5150 4950 50  0001 C CNN
-F 1 "GND" H 5150 5050 50  0000 C CNN
-F 2 "" H 5150 5200 50  0000 C CNN
-F 3 "" H 5150 5200 50  0000 C CNN
-	1    5150 5200
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5150 5200 5150 5100
 Wire Wire Line
@@ -155,114 +37,12 @@ Wire Wire Line
 	6450 4800 6550 4800
 Text Label 6550 4500 0    60   ~ 0
 USB_VBUS
-$Comp
-L C C1
-U 1 1 58A0A596
-P 5350 1750
-F 0 "C1" H 5375 1850 50  0000 L CNN
-F 1 "0.1µF" H 5375 1650 50  0000 L CNN
-F 2 "kicadlib:SMD_0603_C" H 5388 1600 50  0001 C CNN
-F 3 "" H 5350 1750 50  0000 C CNN
-	1    5350 1750
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6550 4500 6450 4500
-$Comp
-L LED D1
-U 1 1 58A0AEDC
-P 8150 2400
-F 0 "D1" H 8150 2500 50  0000 C CNN
-F 1 "I2C ACTIVE LED" H 8150 2250 50  0000 C CNN
-F 2 "kicadlib:SMD_0603_LED_REVERSED" H 8150 2400 50  0001 C CNN
-F 3 "" H 8150 2400 50  0000 C CNN
-	1    8150 2400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8000 2400 7500 2400
-$Comp
-L R R6
-U 1 1 58A0AF9A
-P 8650 2400
-F 0 "R6" V 8730 2400 50  0000 C CNN
-F 1 "1K" V 8650 2400 50  0000 C CNN
-F 2 "kicadlib:SMD_0603_R" V 8580 2400 50  0001 C CNN
-F 3 "" H 8650 2400 50  0000 C CNN
-	1    8650 2400
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	8500 2400 8300 2400
-Text Label 6000 1200 2    60   ~ 0
-USB_VBUS
-Text Label 7600 1800 0    60   ~ 0
+Text Label 5900 2600 2    60   ~ 0
 USB_DM
-Text Label 7600 1650 0    60   ~ 0
+Text Label 5900 2700 2    60   ~ 0
 USB_DP
-Wire Wire Line
-	7600 1800 7500 1800
-Wire Wire Line
-	7600 1650 7500 1650
-Text Label 9100 2400 0    60   ~ 0
-USB_VBUS
-Wire Wire Line
-	9100 2400 8800 2400
-$Comp
-L GND #PWR03
-U 1 1 58A0B59A
-P 7700 1350
-F 0 "#PWR03" H 7700 1100 50  0001 C CNN
-F 1 "GND" H 7700 1200 50  0000 C CNN
-F 2 "" H 7700 1350 50  0000 C CNN
-F 3 "" H 7700 1350 50  0000 C CNN
-	1    7700 1350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7700 1350 7550 1350
-Wire Wire Line
-	7550 1350 7550 1500
-Wire Wire Line
-	7550 1500 7500 1500
-$Comp
-L C C3
-U 1 1 58A0B9B1
-P 8250 1800
-F 0 "C3" H 8275 1900 50  0000 L CNN
-F 1 "0.22-0.47µF" H 7700 1700 50  0000 L CNN
-F 2 "kicadlib:SMD_0603_C" H 8288 1650 50  0001 C CNN
-F 3 "" H 8250 1800 50  0000 C CNN
-	1    8250 1800
-	-1   0    0    1   
-$EndComp
-$Comp
-L GND #PWR04
-U 1 1 58A0BB70
-P 8250 2050
-F 0 "#PWR04" H 8250 1800 50  0001 C CNN
-F 1 "GND" H 8250 1900 50  0000 C CNN
-F 2 "" H 8250 2050 50  0000 C CNN
-F 3 "" H 8250 2050 50  0000 C CNN
-	1    8250 2050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8250 1950 8250 2050
-Wire Wire Line
-	8250 1600 8050 1600
-Wire Wire Line
-	8050 1600 8050 1950
-Wire Wire Line
-	8050 1950 7500 1950
-Text Label 7600 2250 0    60   ~ 0
-I2C_SDA
-Text Label 7600 2100 0    60   ~ 0
-I2C_SCL
-Wire Wire Line
-	7600 2250 7500 2250
-Wire Wire Line
-	7600 2100 7500 2100
 $Bitmap
 Pos 7850 5750
 Scale 1.000000
@@ -982,112 +762,22 @@ E5 06 00 00 E0 12 54 6E 00 00 00 2E 41 E5 06 00 00 E0 12 54 6E 00 00 00 2E 41 E5
 42 60 82 
 EndData
 $EndBitmap
-Text Label 9600 4150 2    60   ~ 0
+Text Label 8800 2500 0    60   ~ 0
 I2C_SDA
-Text Label 9400 3950 2    60   ~ 0
+Text Label 7950 2400 0    60   ~ 0
 I2C_SCL
-Text Label 9400 3450 2    60   ~ 0
-USB_VBUS
-$Comp
-L R R7
-U 1 1 58A0D94E
-P 9500 3700
-F 0 "R7" V 9580 3700 50  0000 C CNN
-F 1 "4.7K" V 9500 3700 50  0000 C CNN
-F 2 "kicadlib:SMD_0603_R" V 9430 3700 50  0001 C CNN
-F 3 "" H 9500 3700 50  0000 C CNN
-	1    9500 3700
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	9500 3850 9500 3950
-Wire Wire Line
-	9500 3950 9400 3950
-Wire Wire Line
-	9500 3550 9500 3450
-Wire Wire Line
-	9400 3450 9700 3450
-$Comp
-L R R8
-U 1 1 58A0DBA9
-P 9700 3900
-F 0 "R8" V 9780 3900 50  0000 C CNN
-F 1 "4.7K" V 9700 3900 50  0000 C CNN
-F 2 "kicadlib:SMD_0603_R" V 9630 3900 50  0001 C CNN
-F 3 "" H 9700 3900 50  0000 C CNN
-	1    9700 3900
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	9700 4050 9700 4150
-Wire Wire Line
-	9700 4150 9600 4150
-Wire Wire Line
-	9700 3450 9700 3750
-Connection ~ 9500 3450
-Text Notes 9250 3300 0    60   ~ 0
+Text Notes 8000 1950 0    60   ~ 0
 I2C Pullups
-Wire Wire Line
-	8250 1650 8250 1600
-Text Label 6400 1800 2    60   ~ 0
-GP1
-Text Label 6400 1950 2    60   ~ 0
-~RST
-Text Label 6400 2100 2    60   ~ 0
-URx
-Text Label 6400 2250 2    60   ~ 0
-UTx
-Text Label 6400 2400 2    60   ~ 0
-GP2
-Wire Wire Line
-	6400 1650 6500 1650
-Wire Wire Line
-	6500 1800 6400 1800
-Wire Wire Line
-	6000 1950 6500 1950
-Wire Wire Line
-	6500 2100 6400 2100
-Wire Wire Line
-	6400 2250 6500 2250
-Wire Wire Line
-	6500 2400 6400 2400
-$Comp
-L C C2
-U 1 1 58A1026C
-P 5650 1750
-F 0 "C2" H 5675 1850 50  0000 L CNN
-F 1 "10µF" H 5675 1650 50  0000 L CNN
-F 2 "kicadlib:SMD_0603_C" H 5688 1600 50  0001 C CNN
-F 3 "" H 5650 1750 50  0000 C CNN
-	1    5650 1750
-	1    0    0    -1  
-$EndComp
 Text Label 5150 1500 2    60   ~ 0
 USB_VBUS
 Wire Wire Line
-	5150 1500 6500 1500
-Wire Wire Line
-	5650 1500 5650 1600
-Connection ~ 5650 1500
-$Comp
-L GND #PWR05
-U 1 1 58A1064D
-P 5500 2000
-F 0 "#PWR05" H 5500 1750 50  0001 C CNN
-F 1 "GND" H 5500 1850 50  0000 C CNN
-F 2 "" H 5500 2000 50  0000 C CNN
-F 3 "" H 5500 2000 50  0000 C CNN
-	1    5500 2000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5650 2000 5650 1900
+	5150 1500 5350 1500
 Wire Wire Line
 	1500 5750 1500 5850
 Wire Wire Line
 	1700 5850 1700 5750
 Wire Wire Line
-	1200 5850 1900 5850
+	1200 5850 1500 5850
 Text Label 5150 4500 2    60   ~ 0
 SENSE1+
 Text Label 5150 4650 2    60   ~ 0
@@ -1106,61 +796,6 @@ Wire Wire Line
 	5250 4950 5150 4950
 Text Label 1900 5850 0    60   ~ 0
 SENSE1-
-$Comp
-L TEST TP3
-U 1 1 58A11D38
-P 1700 5150
-F 0 "TP3" H 1700 5450 50  0000 C BNN
-F 1 "S1_SEL_L" V 1700 5850 50  0000 C CNN
-F 2 "kicadlib:TEST_0.100" H 1700 5150 50  0001 C CNN
-F 3 "" H 1700 5150 50  0000 C CNN
-	1    1700 5150
-	1    0    0    -1  
-$EndComp
-$Comp
-L TEST TP2
-U 1 1 58A11D3E
-P 1500 5150
-F 0 "TP2" H 1500 5450 50  0000 C BNN
-F 1 "S1_SEL_H" V 1500 5850 50  0000 C CNN
-F 2 "kicadlib:TEST_0.100" H 1500 5150 50  0001 C CNN
-F 3 "" H 1500 5150 50  0000 C CNN
-	1    1500 5150
-	1    0    0    -1  
-$EndComp
-$Comp
-L TEST TP4
-U 1 1 58A11D44
-P 1900 5150
-F 0 "TP4" H 1900 5450 50  0000 C BNN
-F 1 "S1_SEL_C" V 1900 5950 50  0000 C CNN
-F 2 "kicadlib:TEST_0.100" H 1900 5150 50  0001 C CNN
-F 3 "" H 1900 5150 50  0000 C CNN
-	1    1900 5150
-	1    0    0    -1  
-$EndComp
-$Comp
-L TEST TP1
-U 1 1 58A1208D
-P 1200 5750
-F 0 "TP1" H 1200 6050 50  0000 C BNN
-F 1 "S1_OUT" H 1200 6000 50  0000 C CNN
-F 2 "kicadlib:TEST_0.100" H 1200 5750 50  0001 C CNN
-F 3 "" H 1200 5750 50  0000 C CNN
-	1    1200 5750
-	1    0    0    -1  
-$EndComp
-$Comp
-L TEST TP5
-U 1 1 58A12234
-P 2100 5150
-F 0 "TP5" H 2100 5450 50  0000 C BNN
-F 1 "S1_IN" H 2100 5400 50  0000 C CNN
-F 2 "kicadlib:TEST_0.100" H 2100 5150 50  0001 C CNN
-F 3 "" H 2100 5150 50  0000 C CNN
-	1    2100 5150
-	1    0    0    -1  
-$EndComp
 Connection ~ 1700 5850
 Wire Wire Line
 	1200 5750 1200 5850
@@ -1172,7 +807,7 @@ Wire Wire Line
 Wire Wire Line
 	2100 5150 2100 5250
 Wire Wire Line
-	1900 5250 2200 5250
+	1900 5250 2100 5250
 Wire Wire Line
 	1900 5250 1900 5150
 Wire Notes Line
@@ -1186,91 +821,14 @@ Wire Notes Line
 Text Label 2200 5250 0    60   ~ 0
 SENSE1+
 Connection ~ 2100 5250
-$Comp
-L R R3
-U 1 1 58A14D68
-P 3300 5600
-F 0 "R3" V 3380 5600 50  0000 C CNN
-F 1 "0.1R" V 3300 5600 50  0000 C CNN
-F 2 "kicadlib:SMD_0603_R" V 3230 5600 50  0001 C CNN
-F 3 "" H 3300 5600 50  0000 C CNN
-	1    3300 5600
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R4
-U 1 1 58A14D6E
-P 3500 5600
-F 0 "R4" V 3580 5600 50  0000 C CNN
-F 1 "1.0R" V 3500 5600 50  0000 C CNN
-F 2 "kicadlib:SMD_0603_R" V 3430 5600 50  0001 C CNN
-F 3 "" H 3500 5600 50  0000 C CNN
-	1    3500 5600
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3300 5750 3300 5850
 Wire Wire Line
 	3500 5850 3500 5750
 Wire Wire Line
-	3000 5850 3700 5850
+	3000 5850 3300 5850
 Text Label 3700 5850 0    60   ~ 0
 SENSE2-
-$Comp
-L TEST TP8
-U 1 1 58A14D78
-P 3500 5150
-F 0 "TP8" H 3500 5450 50  0000 C BNN
-F 1 "S2_SEL_L" V 3500 5850 50  0000 C CNN
-F 2 "kicadlib:TEST_0.100" H 3500 5150 50  0001 C CNN
-F 3 "" H 3500 5150 50  0000 C CNN
-	1    3500 5150
-	1    0    0    -1  
-$EndComp
-$Comp
-L TEST TP7
-U 1 1 58A14D7E
-P 3300 5150
-F 0 "TP7" H 3300 5450 50  0000 C BNN
-F 1 "S2_SEL_H" V 3300 5850 50  0000 C CNN
-F 2 "kicadlib:TEST_0.100" H 3300 5150 50  0001 C CNN
-F 3 "" H 3300 5150 50  0000 C CNN
-	1    3300 5150
-	1    0    0    -1  
-$EndComp
-$Comp
-L TEST TP9
-U 1 1 58A14D84
-P 3700 5150
-F 0 "TP9" H 3700 5450 50  0000 C BNN
-F 1 "S2_SEL_C" V 3700 5950 50  0000 C CNN
-F 2 "kicadlib:TEST_0.100" H 3700 5150 50  0001 C CNN
-F 3 "" H 3700 5150 50  0000 C CNN
-	1    3700 5150
-	1    0    0    -1  
-$EndComp
-$Comp
-L TEST TP6
-U 1 1 58A14D8A
-P 3000 5750
-F 0 "TP6" H 3000 6050 50  0000 C BNN
-F 1 "S2_OUT" H 3000 6000 50  0000 C CNN
-F 2 "kicadlib:TEST_0.100" H 3000 5750 50  0001 C CNN
-F 3 "" H 3000 5750 50  0000 C CNN
-	1    3000 5750
-	1    0    0    -1  
-$EndComp
-$Comp
-L TEST TP10
-U 1 1 58A14D90
-P 3900 5150
-F 0 "TP10" H 3900 5450 50  0000 C BNN
-F 1 "S2_IN" H 3900 5400 50  0000 C CNN
-F 2 "kicadlib:TEST_0.100" H 3900 5150 50  0001 C CNN
-F 3 "" H 3900 5150 50  0000 C CNN
-	1    3900 5150
-	1    0    0    -1  
-$EndComp
 Connection ~ 3500 5850
 Wire Wire Line
 	3000 5750 3000 5850
@@ -1282,7 +840,7 @@ Wire Wire Line
 Wire Wire Line
 	3900 5150 3900 5250
 Wire Wire Line
-	3700 5250 4000 5250
+	3700 5250 3900 5250
 Wire Wire Line
 	3700 5250 3700 5150
 Wire Notes Line
@@ -1302,49 +860,399 @@ Text Notes 1000 7050 0    60   ~ 0
 				Sampling freq	2.5ms	80ms(default)	\n	R=	0.1	ohm	ADC bits=	6	11	\nmV range		A range		Resolution			\n10	+/-	0.1	A		1.587301587	0.04885197851	mA\n20	+/-	0.2	A		3.174603175	0.09770395701	mA\n40	+/-	0.4	A		6.349206349	0.195407914	mA\n80	+/-	0.8	A		12.6984127	0.390815828	mA
 Text Notes 3750 7050 0    60   ~ 0
 				Sampling freq	2.5ms	80ms(default)	\n	R=	1	ohm	ADC bits=	6	11	\nmV range		A range		Resolution			\n10	+/-	0.01	A		0.1587301587	0.004885197851	mA\n20	+/-	0.02	A		0.3174603175	0.009770395701	mA\n40	+/-	0.04	A		0.6349206349	0.0195407914	mA\n80	+/-	0.08	A		1.26984127	0.0390815828	mA
-Text Label 7600 2400 0    60   ~ 0
-GP3
-Text Label 7600 1950 0    60   ~ 0
-VUSB
-$Comp
-L R R5
-U 1 1 58A0EEBF
-P 6000 1750
-F 0 "R5" V 6080 1750 50  0000 C CNN
-F 1 "10K" V 6000 1750 50  0000 C CNN
-F 2 "kicadlib:SMD_0603_R" V 5930 1750 50  0001 C CNN
-F 3 "" H 6000 1750 50  0000 C CNN
-	1    6000 1750
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	6000 1900 6000 1950
-Wire Wire Line
-	6000 1600 6000 1500
-Connection ~ 6000 1500
-Text Label 6400 1650 2    60   ~ 0
-GP0
-NoConn ~ 6400 1650
-NoConn ~ 6400 1800
-NoConn ~ 6400 2400
 Text Label 6550 4950 0    60   ~ 0
 ~ALERT
 Text Label 6550 5100 0    60   ~ 0
 ADDR_SEL
 NoConn ~ 6550 5100
-NoConn ~ 6400 2100
-NoConn ~ 6400 2250
 Wire Wire Line
 	6450 4950 6550 4950
 NoConn ~ 6550 4950
 Wire Wire Line
 	5350 1600 5350 1500
 Connection ~ 5350 1500
+Text Notes 5350 1450 0    60   ~ 0
+*nb place close\nto Vdd pins on ICs
+Wire Wire Line
+	1700 5850 1900 5850
+Wire Wire Line
+	1500 5850 1700 5850
+Wire Wire Line
+	2100 5250 2200 5250
+Wire Wire Line
+	3500 5850 3700 5850
+Wire Wire Line
+	3300 5850 3500 5850
+Wire Wire Line
+	3900 5250 4000 5250
+$Comp
+L Interface_USB:FT200XD U2
+U 1 1 5CA81870
+P 6700 2700
+F 0 "U2" H 6200 3350 50  0000 C CNN
+F 1 "FT200XD" H 6300 3250 50  0000 C CNN
+F 2 "Package_DFN_QFN:DFN-10-1EP_3x3mm_P0.5mm_EP1.55x2.48mm" H 7200 2150 50  0001 C CNN
+F 3 "http://www.ftdichip.com/Products/ICs/FT200XD.html" H 6700 2700 50  0001 C CNN
+	1    6700 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 1500 5650 1500
+Connection ~ 5650 1500
+Wire Wire Line
+	5650 1500 5650 1600
 Wire Wire Line
 	5350 1900 5350 2000
 Wire Wire Line
-	5350 2000 5650 2000
+	5650 2000 5650 1900
+Wire Wire Line
+	6600 1500 6600 2100
+Wire Wire Line
+	5650 1500 6600 1500
+Text Label 6800 2000 0    60   ~ 0
+FT200XD_VCCIO
+Wire Wire Line
+	6800 2100 6800 2000
+Wire Wire Line
+	6000 3000 5800 3000
+Wire Wire Line
+	5800 3000 5800 3250
+Wire Wire Line
+	6600 3300 6600 3600
+Wire Wire Line
+	6600 3600 5800 3600
+Wire Wire Line
+	5800 3600 5800 3550
+Wire Wire Line
+	5800 3600 5800 3650
+Connection ~ 5800 3600
+Wire Wire Line
+	6600 3600 6800 3600
+Wire Wire Line
+	6800 3600 6800 3300
+Connection ~ 6600 3600
+NoConn ~ 7400 2700
+Wire Wire Line
+	8700 2500 8700 2400
+Connection ~ 8700 2500
+Wire Wire Line
+	8700 2500 8800 2500
+Connection ~ 6800 2100
+Wire Wire Line
+	7400 2500 8700 2500
+$Comp
+L Connector:USB_B_Micro J1
+U 1 1 5CAA49A0
+P 3500 2850
+F 0 "J1" H 3555 3317 50  0000 C CNN
+F 1 "USB_B_Micro" H 3555 3226 50  0000 C CNN
+F 2 "Connector_USB:USB_Micro-B_Molex_47346-0001" H 3650 2800 50  0001 C CNN
+F 3 "~" H 3650 2800 50  0001 C CNN
+	1    3500 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 3400 3500 3250
+Wire Wire Line
+	3800 2950 3950 2950
+Wire Wire Line
+	3800 2850 3950 2850
+Wire Wire Line
+	3950 2650 3800 2650
+NoConn ~ 3400 3250
+NoConn ~ 3800 3050
+Wire Wire Line
+	5900 2600 6000 2600
+Wire Wire Line
+	6000 2700 5900 2700
+Wire Wire Line
+	6000 2400 5400 2400
+Wire Wire Line
+	5400 2400 5400 3000
+Wire Wire Line
+	5400 3000 5800 3000
+Connection ~ 5800 3000
+$Comp
+L Device:R R5
+U 1 1 5CAB2873
+P 7650 2250
+F 0 "R5" H 7720 2296 50  0000 L CNN
+F 1 "1K" H 7720 2205 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 7580 2250 50  0001 C CNN
+F 3 "~" H 7650 2250 50  0001 C CNN
+	1    7650 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 5CAB2942
+P 5800 3400
+F 0 "C3" H 5915 3446 50  0000 L CNN
+F 1 "100nF" H 5915 3355 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5838 3250 50  0001 C CNN
+F 3 "~" H 5800 3400 50  0001 C CNN
+	1    5800 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7400 2400 7650 2400
+Wire Wire Line
+	6800 2100 7650 2100
+Connection ~ 7650 2100
+Wire Wire Line
+	7650 2100 8700 2100
+Connection ~ 7650 2400
+Wire Wire Line
+	7650 2400 7950 2400
+$Comp
+L Device:R R6
+U 1 1 5CAB2AD7
+P 8700 2250
+F 0 "R6" H 8770 2296 50  0000 L CNN
+F 1 "1K" H 8770 2205 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 8630 2250 50  0001 C CNN
+F 3 "~" H 8700 2250 50  0001 C CNN
+	1    8700 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5CAB2B2F
+P 5350 1750
+F 0 "C1" H 5150 1800 50  0000 L CNN
+F 1 "0.1µF" H 5000 1700 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5388 1600 50  0001 C CNN
+F 3 "~" H 5350 1750 50  0001 C CNN
+	1    5350 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5CAB2C20
+P 5650 1750
+F 0 "C2" H 5765 1796 50  0000 L CNN
+F 1 "10pF" H 5765 1705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5688 1600 50  0001 C CNN
+F 3 "~" H 5650 1750 50  0001 C CNN
+	1    5650 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 2000 5500 2000
+$Comp
+L power:GND #PWR01
+U 1 1 5CAB2FA7
+P 3500 3400
+F 0 "#PWR01" H 3500 3150 50  0001 C CNN
+F 1 "GND" H 3505 3227 50  0000 C CNN
+F 2 "" H 3500 3400 50  0001 C CNN
+F 3 "" H 3500 3400 50  0001 C CNN
+	1    3500 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 5CAB2FE5
+P 5500 2050
+F 0 "#PWR03" H 5500 1800 50  0001 C CNN
+F 1 "GND" H 5505 1877 50  0000 C CNN
+F 2 "" H 5500 2050 50  0001 C CNN
+F 3 "" H 5500 2050 50  0001 C CNN
+	1    5500 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 2050 5500 2000
 Connection ~ 5500 2000
-Text Notes 4400 1900 0    60   ~ 0
-*nb place close\nto Vdd pins on ICs
+Wire Wire Line
+	5500 2000 5650 2000
+$Comp
+L power:GND #PWR04
+U 1 1 5CAB4406
+P 5800 3650
+F 0 "#PWR04" H 5800 3400 50  0001 C CNN
+F 1 "GND" H 5805 3477 50  0000 C CNN
+F 2 "" H 5800 3650 50  0001 C CNN
+F 3 "" H 5800 3650 50  0001 C CNN
+	1    5800 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5CAB4744
+P 5150 5200
+F 0 "#PWR02" H 5150 4950 50  0001 C CNN
+F 1 "GND" H 5155 5027 50  0000 C CNN
+F 2 "" H 5150 5200 50  0001 C CNN
+F 3 "" H 5150 5200 50  0001 C CNN
+	1    5150 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP1
+U 1 1 5CAB4876
+P 1200 5750
+F 0 "TP1" H 1400 5900 50  0000 R CNN
+F 1 "S1_OUT" H 1600 5800 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Horizontal" H 1400 5750 50  0001 C CNN
+F 3 "~" H 1400 5750 50  0001 C CNN
+	1    1200 5750
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP6
+U 1 1 5CAB49A1
+P 3000 5750
+F 0 "TP6" H 2800 5900 50  0000 L CNN
+F 1 "S2_OUT" H 2600 5800 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Horizontal" H 3200 5750 50  0001 C CNN
+F 3 "~" H 3200 5750 50  0001 C CNN
+	1    3000 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5CAB4BD7
+P 1500 5600
+F 0 "R1" H 1350 5650 50  0000 L CNN
+F 1 "0.1R" H 1250 5550 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1430 5600 50  0001 C CNN
+F 3 "~" H 1500 5600 50  0001 C CNN
+	1    1500 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5CAB4C6C
+P 1700 5600
+F 0 "R2" H 1770 5646 50  0000 L CNN
+F 1 "1.0R" H 1770 5555 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1630 5600 50  0001 C CNN
+F 3 "~" H 1700 5600 50  0001 C CNN
+	1    1700 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP2
+U 1 1 5CAB4EDB
+P 1500 5150
+F 0 "TP2" H 1650 5200 50  0000 R CNN
+F 1 "S1_SEL_H" V 1500 5800 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Horizontal" H 1700 5150 50  0001 C CNN
+F 3 "~" H 1700 5150 50  0001 C CNN
+	1    1500 5150
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP3
+U 1 1 5CAB4F29
+P 1700 5150
+F 0 "TP3" H 1850 5200 50  0000 R CNN
+F 1 "S1_SEL_L" V 1700 5800 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Horizontal" H 1900 5150 50  0001 C CNN
+F 3 "~" H 1900 5150 50  0001 C CNN
+	1    1700 5150
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP4
+U 1 1 5CAB4F69
+P 1900 5150
+F 0 "TP4" H 2050 5200 50  0000 R CNN
+F 1 "S1_SEL_C" V 1900 5800 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Horizontal" H 2100 5150 50  0001 C CNN
+F 3 "~" H 2100 5150 50  0001 C CNN
+	1    1900 5150
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP7
+U 1 1 5CAB5548
+P 3300 5150
+F 0 "TP7" H 3450 5200 50  0000 R CNN
+F 1 "S2_SEL_H" V 3300 5800 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Horizontal" H 3500 5150 50  0001 C CNN
+F 3 "~" H 3500 5150 50  0001 C CNN
+	1    3300 5150
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP8
+U 1 1 5CAB55A2
+P 3500 5150
+F 0 "TP8" H 3650 5200 50  0000 R CNN
+F 1 "S2_SEL_L" V 3500 5800 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Horizontal" H 3700 5150 50  0001 C CNN
+F 3 "~" H 3700 5150 50  0001 C CNN
+	1    3500 5150
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP9
+U 1 1 5CAB560E
+P 3700 5150
+F 0 "TP9" H 3850 5200 50  0000 R CNN
+F 1 "S2_SEL_C" V 3700 5800 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Horizontal" H 3900 5150 50  0001 C CNN
+F 3 "~" H 3900 5150 50  0001 C CNN
+	1    3700 5150
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5CAB571F
+P 3300 5600
+F 0 "R3" H 3150 5650 50  0000 L CNN
+F 1 "0.1R" H 3050 5550 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3230 5600 50  0001 C CNN
+F 3 "~" H 3300 5600 50  0001 C CNN
+	1    3300 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5CAB576F
+P 3500 5600
+F 0 "R4" H 3570 5646 50  0000 L CNN
+F 1 "1.0R" H 3570 5555 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3430 5600 50  0001 C CNN
+F 3 "~" H 3500 5600 50  0001 C CNN
+	1    3500 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L kicadlib:PAC1720 U1
+U 1 1 5CAB5908
+P 5850 4800
+F 0 "U1" H 5850 5387 60  0000 C CNN
+F 1 "PAC1720" H 5850 5281 60  0000 C CNN
+F 2 "Package_DFN_QFN:DFN-10-1EP_2x3mm_P0.5mm_EP0.64x2.4mm" H 5650 4800 60  0001 C CNN
+F 3 "" H 5650 4800 60  0001 C CNN
+	1    5850 4800
+	1    0    0    -1  
+$EndComp
+Text Label 5400 2400 2    60   ~ 0
+FT200XD_VCCIO
+$Comp
+L Connector:TestPoint TP5
+U 1 1 5CAB5E65
+P 2100 5150
+F 0 "TP5" H 2150 5400 50  0000 L CNN
+F 1 "S1_IN" H 2150 5300 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Horizontal" H 2300 5150 50  0001 C CNN
+F 3 "~" H 2300 5150 50  0001 C CNN
+	1    2100 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP10
+U 1 1 5CAB5F04
+P 3900 5150
+F 0 "TP10" H 3950 5400 50  0000 L CNN
+F 1 "S2_IN" H 3950 5300 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Horizontal" H 4100 5150 50  0001 C CNN
+F 3 "~" H 4100 5150 50  0001 C CNN
+	1    3900 5150
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
